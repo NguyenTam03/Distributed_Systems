@@ -67,11 +67,9 @@ public class Server {
                 out.flush();
                 System.out.println("Send to Coodinator success.........");
 
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
 
 
