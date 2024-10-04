@@ -31,10 +31,11 @@ public class Server {
 
     private class ClientHandler implements Runnable {
         private Socket socket;
-
+        private UserImpl userDao;
         public ClientHandler(Socket socket) {
             super();
             this.socket = socket;
+            userDao = new UserImpl();
         }
 
         @Override
@@ -48,23 +49,9 @@ public class Server {
                 String title = in.readLine();
                 System.out.println(title);
 
-                switch (title) {
-                    case "a":
-
-                        break;
-                    case "b":
-
-                        break;
-                    case "c":
-
-                        break;
-                    case "getList":
-                        UserImpl userDao = new UserImpl();
-                        List<User> users = userDao.getListUser();
-                        out.writeObject(users);
-                        break;
-                }
-                out.flush();
+                List<User> users = userDao.getListUser();
+                out.writeObject(users);
+//                out.flush();
                 System.out.println("Send to Coodinator success.........");
 
             } catch (Exception e) {
