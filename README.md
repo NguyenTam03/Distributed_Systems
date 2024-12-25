@@ -1,0 +1,2 @@
+# Đề tài: Trên mạng nội bộ của nhóm, 2 máy tính có CSDLgiống nhau, 1 máy điều phối việc truy cập dữ liệu từ các client (các máy tính còn lại) truy cập dữ liệu lần lượt dataserver. Viết ứng dụng đáp ứng yêu cầu đã nêu. Khi 1 client truy cập dữ liệu, máy tính điều phối thông báo id của client nào sẽ truy cập dữ liệu với database server nào,  trên dataserver nào, datataserver đó hiển thị id máy đã truy cập dữ liệu.
+- Về Coordinator và Server phải add file lib.jar vào project thì mới hoạt động được
